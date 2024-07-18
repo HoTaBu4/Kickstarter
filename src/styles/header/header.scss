@@ -1,0 +1,125 @@
+@import './../utils';
+@import './burger/burger';
+@import './languages/languages';
+
+.header {
+  color: #4f4f4f;
+
+  &__logo {
+    @include hover(transform, scale(1.1));
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &--wrapper {
+      height: 100%;
+      display: none;
+      & > :not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__specs {
+    cursor: pointer;
+
+    @include hover(font-weight, 700);
+    @include hover(transform, scale(1.1));
+  }
+
+  &__languages {
+    display: flex;
+  }
+
+  &__button-buy {
+    height: 100%;
+    color: white;
+    width: 100px;
+    background-color: #333;
+
+    @include button;
+  }
+
+  &__burger-logo {
+    align-self: center;
+    display: block;
+    height: 16px;
+    width: 24px;
+    position: relative;
+    margin-left: 30px;
+
+    &::after,
+    &::before,
+    &--inner {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      left: 0;
+      border-radius: 8px;
+      transition: all 0.5s ease;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &--inner {
+      top: 7px;
+    }
+
+    &:hover {
+      transition: all 0.5s ease;
+
+      &::before {
+        width: 18px;
+      }
+
+      &::after {
+        width: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 744px) {
+  .header {
+    margin-top: 29px;
+    height: 48px;
+
+    &__right {
+      display: flex;
+      flex-direction: row;
+
+      &--wrapper {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__burger-logo {
+      display: none;
+    }
+  }
+}

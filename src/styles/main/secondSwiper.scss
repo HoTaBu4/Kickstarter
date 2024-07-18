@@ -1,0 +1,118 @@
+@import './../utils';
+
+.second-swiper {
+  overflow: hidden;
+  background-color: #d6ecec;
+  padding-top: 30px;
+
+  & .swiper-wrapper {
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  & .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .swiper-button-next::after,
+  & .swiper-button-prev::after {
+    display: none;
+  }
+
+  & .swiper-buttons {
+    position: relative;
+    height: 30px;
+  }
+
+  & .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  & .swiper-button-next img,
+  .swiper-button-prev img {
+    width: 100%;
+    height: 100%;
+  }
+
+  // &.swiper-button-next {
+  // }
+
+  // & .swiper-button-prev {
+  // }
+
+  & .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #007aff; /* Example active bullet color */
+  }
+
+  & .swiper__params {
+    padding: 0 30px;
+    max-width: 276px;
+    justify-content: center;
+
+    &--title {
+      color: #0c797a;
+      margin-bottom: 20px;
+    }
+
+    &--item {
+      list-style: disc;
+      margin-left: 16px;
+
+      @include secondary-text;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  & .swiper-pagination {
+    position: static;
+    height: 50px;
+  }
+}
+
+.second__swiper--title {
+  padding: 0 30px;
+}
+
+@media (min-width: 744px) {
+  .second-swiper {
+    & .swiper__params {
+      padding-left: 90px;
+    }
+
+    & .swiper-slide {
+      justify-content: start;
+    }
+  }
+
+  .second__swiper--wrapper {
+    padding: 34px;
+    margin: 0 auto;
+    max-width: 1194px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .second-swiper {
+    & .swiper-wrapper {
+      padding: 0 102px;
+      flex-flow: column wrap;
+      max-height: 648px;
+    }
+
+    & .swiper-slide {
+      max-width: 378px;
+    }
+
+    & .swiper__params {
+      padding-left: 0;
+    }
+  }
+}

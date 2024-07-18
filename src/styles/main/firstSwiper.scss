@@ -1,0 +1,53 @@
+@import 'swiper/swiper-bundle.css';
+
+.first-swiper {
+  overflow: hidden;
+
+  .swiper-wrapper {
+    display: flex;
+  }
+  
+  & .swiper {
+    &__params {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      &--logo {
+        margin-bottom: 40px;
+      }
+
+      &--title {
+        margin-bottom: 20px;
+      }
+    }
+  }  
+}
+
+@media(min-width:744px) {
+  .first-swiper{
+    & .swiper-wrapper {
+      display: grid; 
+      gap: 64px 20px;
+      grid-template:1fr 1fr /1fr 1fr;
+    }
+  }
+}
+
+@media (min-width:1440px) {
+  .first-swiper{
+    & .swiper-wrapper {
+      display: grid;
+      grid-template:1fr/1fr 1fr 1fr 1fr;
+
+    }
+
+    & .swiper__params--logo  {
+      margin: 0;
+    }
+
+    & .swiper__params--img {
+      height: 90px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.languages-change {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  color: #bdbdbd;
+
+  // &--ua {
+  // }
+
+  // &__en {
+  // }
+
+  &__middle {
+    color: #333;
+  }
+}

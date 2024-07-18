@@ -1,3 +1,25 @@
+@import './utils/extends';
+
 h1 {
-  @extend %h1;
+ @include h1-styles; 
+}
+
+h2 {
+  @include h2-styles; 
+}
+
+h3 {
+  @include h3-styles; 
+}
+
+h4 {
+  @include h4-styles; 
+}
+
+h5 {
+  @include h5-styles; 
+}
+
+h6 {
+  @include h6-styles; 
 }

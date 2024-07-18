@@ -1,0 +1,140 @@
+@import './../utils';
+
+.footer {
+  width: 100%;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px 0;
+
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+   
+
+    &--input {
+      height: 48px;
+      margin-bottom: 20px;
+    }
+
+    &--textarea {
+      resize: none;
+      margin-bottom: 30px;
+    }
+    
+    &--input,
+    &--textarea {
+      box-sizing: border-box;
+      border: 1px solid #828282;
+      color: #bdbdbd;
+      padding: 12px 30px;
+
+      @include main-text;
+
+      &:hover,
+      &:active {
+        outline: none;
+      }
+    }
+
+    &--button {
+      background-color: #0db2b3;
+      color: white;
+      width: 102px;
+      height: 40px;
+
+      @include button;
+    }
+  }
+
+  &__wrapper {
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  &__logo {
+    display: none;
+
+    @include hover(transform, scale(1.1));
+  }
+
+  &__button {
+    display: none;
+    position: absolute;
+    right: 0;
+
+    &--img {
+      cursor: pointer;
+
+      @include hover(transform, scale(1.2));
+    }
+  }
+
+  &__logos {
+    margin-bottom: 30px;
+
+    & > :not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &--facebook,
+    &--twiter,
+    &--instagram {
+      cursor: pointer;
+
+      @include hover(transform, scale(1.1));
+    }
+  }
+
+  &__rights {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #bdbdbd;
+
+    @include secondary-text;
+  }
+}
+
+@media (min-width: 744px) {
+  .footer {
+    &__logo {
+      display: block;
+    }
+
+    &__button {
+      display: block;
+    }
+
+    &__rights {
+      margin-bottom: 30px;
+    }
+
+    &__form {
+      flex-direction: row;
+      margin: 140 px 0;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__form {
+    gap: 30px;
+    margin: 170px 0;
+  }
+}
