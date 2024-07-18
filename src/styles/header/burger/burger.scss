@@ -79,7 +79,7 @@
     display: flex;
     flex-direction: column;
 
-    @extend %h6;
+    @include h6-styles;
   }
 
   &__item {
@@ -97,7 +97,7 @@
     &:active {
       transition: all 0.3s ease;
 
-      @extend %h6;
+      @include h6-styles;
     }
   }
 

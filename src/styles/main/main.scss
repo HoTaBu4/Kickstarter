@@ -25,7 +25,7 @@
     &--link {
       @include thirdary-text;
       &:hover {
-        @extend %h6;
+        @include h6-styles;
       }
     }
   }
