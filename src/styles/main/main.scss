@@ -84,11 +84,10 @@
     }
 
     &--link {
-      display: block;
       position: relative;
-      max-width: 160px;
       height: 20px;
       color: #0db2b3;
+      padding-bottom: 5px;
 
       @include button;
 

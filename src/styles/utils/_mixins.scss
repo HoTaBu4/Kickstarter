@@ -1,3 +1,5 @@
+@import './vars';
+
 @mixin hover($property, $toValue) {
   & {
     transition: #{$property} 0.3s ease;
@@ -7,6 +9,8 @@
     }
   }
 }
+
+// styles fot text///
 
 @mixin button {
   font-family: Inter, sans-serif;

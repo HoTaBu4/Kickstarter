@@ -4,22 +4,24 @@
 @import './header/header';
 @import './main/main';
 @import './footer/footer';
+@import './mainTransitonStyles';
 
 html {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: $c-gray;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -27,6 +29,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   min-height: 100%;
+  overflow-x: hidden;
   width: 100%;
 }
 

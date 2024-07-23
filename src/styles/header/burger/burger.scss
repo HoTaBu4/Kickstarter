@@ -22,8 +22,6 @@
     visibility 0.5s ease,
     transform 0.5s ease;
 
-  
-
   &.active {
     transform: translateY(0);
     opacity: 1;
@@ -83,7 +81,7 @@
   }
 
   &__item {
-    font-family: Inter ,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -121,11 +119,15 @@
 
   &__footer {
     &--button {
+      display: flex;
       width: 100%;
       background-color: #333;
       height: 48px;
       margin-bottom: 30px;
       color: white;
+      font-family: 'Helvetica Neu', sans-serif;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

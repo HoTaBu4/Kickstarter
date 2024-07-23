@@ -1,0 +1,21 @@
+.block {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    opacity 1s,
+    transform 1s;
+}
+
+.block-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity 1s,
+    transform 1s;
+}
+
+.block.visible,
+.block-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
